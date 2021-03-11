@@ -1,19 +1,27 @@
 <!--LikeHeager.vue-->
 <template>
 <div>
-  <!-- スロットは複数置くことができる -->
-  <slot name="title"></slot>
+  <slot :user="user" text="text"></slot>
+  <!-- 値を渡しているslotだけが値が表示できるほかは空白 -->
+  <slot></slot>
   <hr>
   <p>いいねの数</p>
-  <slot name="number"></slot>
   <slot></slot>
 </div>
 </template>
 
 <script>
+// コンポーネントの場合はデータは関数にしなければならない
 export default {
-  props: ["headerText"]
-}
+  data() {
+    return {
+      user: {
+        firstName: "first",
+        lastName: "last"
+      }
+    }
+  }
+};
 </script>
 
 <style scoped>
