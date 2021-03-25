@@ -1,11 +1,6 @@
 <!--LikeHeager.vue-->
 <template>
 <div>
-  <slot :user="user" text="text"></slot>
-  <!-- 値を渡しているslotだけが値が表示できるほかは空白 -->
-  <slot></slot>
-  <hr>
-  <p>いいねの数</p>
   <slot></slot>
 </div>
 </template>
@@ -24,8 +19,3 @@ export default {
 };
 </script>
 
-<style scoped>
-h1 {
-  color: red;
-}
-</style>
