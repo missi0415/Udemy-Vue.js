@@ -11,24 +11,18 @@
 <body>
   <!-- index.html -->
   <div id="app">
-    <p>{{message}}</p>
-    <p>{{name}}</p>
-    <p>{{myData}}</p>
-    <button @click="message = 'ボタンから変更'">変更</button>
-  </div>
-  <compo></compo>
-
-  <div id="app2"></div>
-  <div id="app3"></div>
-  <div id="app4">
-    <h1>こんにちは,{{name}}</h1>
-    <button @click="name = '太郎'">名前を変更</button>
-    <button @click="destroy">インスタンスを破壊</button>
+    <my-component></my-component>
+    <my-component></my-component>
+    <my-component></my-component>
   </div>
 
-  <!-- <div class='hello'></div> -->
+  <div id="app2">
+    <my-component></my-component>
+    <my-component></my-component>
+    <my-component></my-component>
+  </div>
 
-
+  
 
   <script src="js/main.js"></script>
 </body>
